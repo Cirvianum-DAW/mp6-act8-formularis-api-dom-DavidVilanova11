@@ -20,6 +20,19 @@ document
             return;
         }
 
+        // La conretrassenya ha de tenir almenys 6 caràcters
+
+        if (password.length < 6) {
+            alert('La contrassenya ha de tenir almenys 6 caràcters');
+            return;
+        }
+
+        // El correu ha de tenir un format vàlid
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!emailRegex.test(email)) {
+            alert('El correu electrònic no és vàlid');
+            return;
+        }
         
         login(email, password);
     }
