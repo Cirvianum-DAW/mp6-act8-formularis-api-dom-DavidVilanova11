@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Form</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+    <div class="container">
+
     <h1>Weather Form</h1>
+    
     <form id="weather">
         <fieldset>
             <legend>Weather Form</legend>
@@ -16,20 +20,35 @@
             <label for="country">Country</label>
             <input type="text" id="country" name="country" required><br>
 
-            <label for="postCode">Post Code</label>
-            <input type="text" id="postCode" name="postCode" required><br>
+            <label for="postalCode">Post Code</label>
+            <input type="text" id="postalCode" name="postalCode" required><br>
 
-            <label for="lang">Language</label>
-            <select id="lang" name="lang">
-                <option value="ca">Catalan</option>
-                <option value="es">Spanish</option>
-                <option value="en">English</option>
-            </select><br>
+            <br>
 
             <input type="submit" value="Send">
         </fieldset>
     </form>
-    <script src="weather.js"></script>
+
+<!-- create those html elements -->
+
+<!-- document.getElementById('currentTemperature').textContent = currentWeather.temp_c;
+document.getElementById('currentWeather').textContent = currentWeather.condition.text;
+document.getElementById('currentIcon').src = currentWeather.condition.icon;
+
+document.getElementById('forecastTemperature').textContent = forecast.avgtemp_c;
+document.getElementById('forecastWeather').textContent = forecast.condition.text;
+document.getElementById('forecastIcon').src = forecast.condition.icon; -->
+
+<p>Current weather in <span id="cityName"></span> is <span id="currentTemperature"></span>°C and <span id="currentWeather"></span></p>
+<img id="currentIcon" src="" alt="Current weather icon">
+
+<p>Forecast for tomorrow in <span id="cityName"></span> is <span id="forecastTemperature"></span>°C and <span id="forecastWeather"></span></p>
+<img id="forecastIcon" src="" alt="Forecast weather icon">
+
+
+
+</div>
+    <script src="meteo.js"></script>
     
 </body>
 </html>
