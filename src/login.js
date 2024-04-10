@@ -1,39 +1,44 @@
-document
-    .getElementById('login')
-    .addEventListener('submit', (e)=> {
-        e.preventDefault();
-        // Obtenir les dades del formulari
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        const termsAccepted = document.getElementById('terms').checked;
+document.addEventListener('DOMContentLoaded', (event) => {
+    document
+        .getElementById('login')
+        .addEventListener('submit', (e)=> {
+            e.preventDefault();
+            // Get form data
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const dataNaixement = document.getElementById('dataNaixement').value;
+            const termsAccepted = document.getElementById('terms').checked;
 
-        // Validació dels camps del formulari
+            // Form field validation
 
-        // Validar que estiguin omplerts
-        if (!email || !password) {
-            alert('Has d\'omplir tots els camps');
-            return;
+            // Check that they are filled
+            if (!email || !password) {
+                alert('You must fill all fields');
+                return;
+            }
+
+            if (!termsAccepted) {
+                alert('You must accept the terms and conditions');
+                return;
+            }
+
+            // Password must be at least 6 characters long
+            if (password.length < 6) {
+                alert('The password must be at least 6 characters long');
+                return;
+            }
+
+            // Email must be in a valid format
+            const emailRegex = /^[a-zA-Z0-9._-]+@cirvianum\.[a-zA-Z]{2,6}$/;
+            if (!emailRegex.test(email)) {
+                alert('The email is not valid');
+                return;
+            }
+
+            const today = new Date();
+            const birthDate = new Date(dataNaixement);
+
+            //login(email, password);
         }
-
-        if (!termsAccepted) {
-            alert('Has d\'acceptar els termes i condicions');
-            return;
-        }
-
-        // La conretrassenya ha de tenir almenys 6 caràcters
-
-        if (password.length < 6) {
-            alert('La contrassenya ha de tenir almenys 6 caràcters');
-            return;
-        }
-
-        // El correu ha de tenir un format vàlid
-        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-        if (!emailRegex.test(email)) {
-            alert('El correu electrònic no és vàlid');
-            return;
-        }
-        
-        login(email, password);
-    }
-);
+    );
+});
