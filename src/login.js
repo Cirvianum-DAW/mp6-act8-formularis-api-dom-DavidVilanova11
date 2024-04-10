@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             const dataNaixement = document.getElementById('dataNaixement').value;
-            const dniNumber = document.getElementById('dniNumber').value;
+            const dniNumber = document.getElementById('idNumber').value;
             const termsAccepted = document.getElementById('terms').checked;
 
             // Form field validation
@@ -71,7 +71,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const storedFormData = JSON.parse(sessionStorage.getItem('formData'));
             console.log(storedFormData);
 
-           // window.location.href = 'meteo.html';
+            // podem veure les dades que hem guardat a la consola (applicació, storage, session storage, file://)
+
+             window.location.href = 'meteo.html';
 
             }
 

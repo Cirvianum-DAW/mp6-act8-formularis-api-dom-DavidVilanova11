@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Form</title>
+</head>
+<body>
+    <h1>Weather Form</h1>
+    <form id="weather">
+        <fieldset>
+            <legend>Weather Form</legend>
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required><br>
+
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" required><br>
+
+            <label for="postCode">Post Code</label>
+            <input type="text" id="postCode" name="postCode" required><br>
+
+            <label for="lang">Language</label>
+            <select id="lang" name="lang">
+                <option value="ca">Catalan</option>
+                <option value="es">Spanish</option>
+                <option value="en">English</option>
+            </select><br>
+
+            <input type="submit" value="Send">
+        </fieldset>
+    </form>
+    <script src="weather.js"></script>
+    
+</body>
+</html>
