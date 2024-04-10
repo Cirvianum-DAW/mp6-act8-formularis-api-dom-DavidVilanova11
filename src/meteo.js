@@ -41,6 +41,18 @@ function getWeather() {
     const currentUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&postal_code=${postalCode}&country=${country}`;
     const forecastUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&postal_code=${postalCode}&country=${country}`;
     
+
+    // AMB PROMISE ALL
+    // const [currentResponse, forecastResponse] = await Promise.all ([
+    //     fetch(currentWeatherUr1),
+    //     fetch(forecastUrl),
+    //     ]);
+
+    // const [currentData, forecastData] = await Promise.all([
+    //     currentResponse.json(),
+    //     forecastResponse.json(),
+    //     ]);
+
     fetch(currentUrl)
         .then(response => response.json())
         .then(data => {
