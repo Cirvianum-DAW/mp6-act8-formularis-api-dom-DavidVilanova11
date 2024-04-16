@@ -38,8 +38,8 @@ function getWeather() {
     }
 
     const apiKey = '4e1af933ab5445919eb155521242602';
-    const currentUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&postal_code=${postalCode}&country=${country}`;
-    const forecastUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&postal_code=${postalCode}&country=${country}`;
+    const currentUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&postal_code=${postalCode}&country=${country}&lang=es`;
+    const forecastUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&postal_code=${postalCode}&country=${country}&lang=es`;
     
 
     // AMB PROMISE ALL
